@@ -1,6 +1,6 @@
 {
     "name": "divineomga/baby-tracker-data-parser",
-    "description": "PHP Parser for data exported from the Baby Tracker mobile app",
+    "description": "PHP parser for data exported from the Baby Tracker mobile app",
     "type": "library",
     "license": "LGPL-3.0-only",
     "authors": [
