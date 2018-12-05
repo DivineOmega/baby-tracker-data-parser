@@ -41,6 +41,9 @@ class Parser
 
         foreach($rows as $row) {
             $className = 'DivineOmega\\BabyTrackerDataParser\\BabyRecords\\'.$row['RecordCategory'].'Record';
+            if (!class_exists($className)) {
+                throw new \Exception('Unexpected record type found: '.$row['RecordCategory']);
+            }
             $collection->push(new $className($row));
         }
 
