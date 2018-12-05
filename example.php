@@ -4,6 +4,10 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $parser = new DivineOmega\BabyTrackerDataParser\Parser(getenv('PATH_TO_ZIP_FILE'));
 
-$result = $parser->parseBabyRecords();
+$records = $parser->parseBabyRecords();
 
-var_dump($result);
+foreach($records as $record) {
+    if ($record instanceof \DivineOmega\BabyTrackerDataParser\BabyRecords\FeedingRecord) {
+        print_r($record);
+    }
+}
