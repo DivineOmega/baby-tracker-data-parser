@@ -9,5 +9,15 @@
             "email": "jordan@hall05.co.uk"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.0",
+        "divineomega/uxdm": "^2.6",
+        "nesbot/carbon": "^1.26.3",
+        "illuminate/support": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DivineOmega\\BabyTrackerDataParser\\": "src/"
+        }
+    }
 }
